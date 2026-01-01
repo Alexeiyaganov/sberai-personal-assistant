@@ -18,7 +18,7 @@ def update_github():
     
     # 1. Сначала делаем PULL
     print("\n1. 📥 Получение изменений с GitHub...")
-    pull_result = os.system('git pull origin main')
+    pull_result = os.system('git pull origin main  --allow-unrelated-histories --no-edit 2>&1')
     
     if pull_result != 0:
         print("⚠️  Ошибка при pull. Продолжаем...")
